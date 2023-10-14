@@ -1,5 +1,5 @@
 # PROJET AVEC FRAMEWORK
-![logo_mycommits](/.src/assets/inspectocat.png)
+![logo_mycommits](/src/assets/inspectocat.png)
 
 **Titre : MyCommits**
 
