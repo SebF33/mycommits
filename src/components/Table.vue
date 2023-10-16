@@ -1,6 +1,6 @@
 <template>
   <div class="m-auto">
-    <table v-if="filteredData.length">
+    <table v-if="filteredData.length" class="mx-auto mt-4">
       <thead>
         <tr>
           <th
@@ -101,8 +101,6 @@ export default {
 
 <style>
 table {
-  margin: 0 auto;
-  margin-top: 20px;
   border: 2px solid #42b983;
   border-radius: 6px;
   background-color: #fff;

@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <a href="/mycommits" class="logo" draggable="false" ondragstart="return false">
+    <a
+      href="/mycommits"
+      class="logo"
+      draggable="false"
+      ondragstart="return false"
+    >
       <img src="./assets/inspectocat.png" alt="logo" />
     </a>
     <router-view />
@@ -14,7 +19,8 @@ export default {
 </script>
 
 <style>
-html {
+html,
+body {
   background-color: #f9f9f9;
 }
 

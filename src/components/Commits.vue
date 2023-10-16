@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="buttons">
+    <div class="buttons mt-2">
       <span>-/+ de commits : </span>
-      <button class="btn btn-primary" v-on:click="decrementCounter">-</button>
+      <b-button class="btn btn-primary" v-on:click="decrementCounter">-</b-button>
       <span class="counter"> {{ counter }} </span>
-      <button class="btn btn-primary" v-on:click="incrementCounter">+</button>
+      <b-button class="btn btn-primary" v-on:click="incrementCounter">+</b-button>
     </div>
 
     <h2>Mes derniers commits sur {{ selectedRepo }} :</h2>

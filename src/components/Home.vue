@@ -4,10 +4,21 @@
 
     <hr />
 
-    <div>
-      <input v-model="searchQuery" placeholder="Filtrer par nom de projet.." />
-      <Table :columns="gridColumns" :data="gridData" :filterKey="searchQuery" />
+    <div class="input-group flex-nowrap m-auto">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">@</span>
+      </div>
+      <input
+        v-model="searchQuery"
+        type="text"
+        class="form-control"
+        placeholder="Filtrer par nom de projet..."
+        aria-label="Projet"
+        aria-describedby="addon-wrapping"
+      />
     </div>
+
+    <Table :columns="gridColumns" :data="gridData" :filterKey="searchQuery" />
   </div>
 </template>
 
@@ -65,5 +76,9 @@ ul {
 
 a {
   color: #42b983;
+}
+
+.input-group {
+  max-width: 260px;
 }
 </style>
