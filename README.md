@@ -22,10 +22,12 @@ Lister mes commits par projet.
 
 **Langage :** JavaScript.
 
-[![Vue.js](/.github/Vue.js.png)](https://v2.vuejs.org)
+[![Vue.js](/.github/Vue.js.png)](https://v2.vuejs.org) [![BootstrapVue](/.github/BootstrapVue.png)](https://bootstrap-vue.org) [![Webpack](/.github/Webpack.png)](https://webpack.js.org)
 
 :toolbox: **Technologies :**
 - [Vue.js 2](https://v2.vuejs.org/v2/guide/installation)
+- [BootstrapVue](https://bootstrap-vue.org/docs)
+- [Webpack](https://webpack.js.org/concepts)
 
 
 <p align="center">
