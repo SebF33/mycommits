@@ -92,16 +92,18 @@ export default {
         const url = `https://api.github.com/repos/SebF33/${currentRepo.value}/commits?per_page=${counter.value}&sha=${currentBranch.value}`;
         const response = await fetch(url);
         const data = await response.json();
+        hasCommit.value = false;
 
         if (data.message === "Not Found") {
-          hasCommit.value = false;
           commits.value = "Pas de commit dans cette branche.";
+        } else if (data.message) {
+          commits.value = data.message;
         } else {
           hasCommit.value = true;
           commits.value = data;
         }
       } catch (error) {
-        commits.value = "Erreur lors de la requête API : " + error.message;
+        commits.value = "Erreur lors de la requête API.";
       }
     });
 
