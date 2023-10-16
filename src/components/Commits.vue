@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="buttons mt-2">
+    <div class="buttons font-weight-bold mt-2">
       <span>-/+ de commits : </span>
       <b-button class="btn btn-primary" v-on:click="decrementCounter">-</b-button>
       <span class="counter"> {{ counter }} </span>
       <b-button class="btn btn-primary" v-on:click="incrementCounter">+</b-button>
     </div>
 
-    <h2>Mes derniers commits sur {{ selectedRepo }} :</h2>
+    <h2>Mes derniers commits sur <span class="font-weight-bold">{{ selectedRepo }}</span> :</h2>
 
     <li v-for="branch in branches" :key="branch" class="branch-item">
       <input
@@ -30,15 +30,15 @@
         - <span class="message">{{ truncate(commit.message) }}</span>
         <br />
         par
-        <span class="author">
+        <span class="author font-weight-bold">
           <a :href="author.html_url" target="_blank">
             {{ commit.author.name }}
           </a>
         </span>
-        le <span class="date">{{ formatCommitDate(commit.author.date) }}</span>
+        le <span class="date font-weight-bold">{{ formatCommitDate(commit.author.date) }}</span>
       </li>
     </ul>
-    <p v-else class="commit-msg">{{ commits }}</p>
+    <p v-else class="font-italic">{{ commits }}</p>
   </div>
 </template>
 
@@ -151,16 +151,6 @@ li {
 .branch-item {
   display: inline-block;
   margin-right: 16px;
-}
-
-.author,
-.buttons,
-.date {
-  font-weight: bold;
-}
-
-.commit-msg {
-  font-style: italic;
 }
 
 .counter {

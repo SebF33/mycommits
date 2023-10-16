@@ -14,7 +14,7 @@
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="font-weight-bold">
         <tr v-for="entry in filteredData" @click="handleItemClick(entry.repo)">
           <td v-for="key in columns" style="cursor: pointer">
             {{ entry[key] }}
